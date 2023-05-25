@@ -1,0 +1,64 @@
+
+INICIALIZAR PROYECTO:
+
+terraform init
+
+ verificar la sintaxis y demás configuración locales
+
+Terraform validate
+
+Terraform plan
+
+Nos permite previsualizar los cambios que vamos a hacer en la infraestructura, en
+particular resalta los recursos a crear y destruir sin ejecutar ningún cambio real.
+
+Terraform apply
+
+aplicar la configuración terraform que hemos creado.
+
+cantidad de recursos que va a crear
+(add), lo que va a modificar (change) y lo que tiene que borrar (destroy):
+
+nos pide una
+confirmación. Vamos a ingresar “yes”.
+
+Luego, vemos cómo la salida del comando nos muestra en tiempo real la creación de los
+recursos:
+
+Al terminar, nos indica el estado final de nuestra infraestructura con un resumen que
+debe coincidir con el informado antes de ingresar “yes”:
+
+¡Fue un éxito! Nuestras dos instancias fueron creadas con todos los recursos en su
+contexto para que funcionen correctamente:
+
+terraform destroy
+
+
+En el caso que dejemos de utilizar nuestra infraestructura, solo basta con ejecutar el
+comando para borrar todo: “terraform destroy”.
+Como vemos en la salida, el resumen del plan se modifica informando que todo está en
+condiciones de borrarse:
+
+Al finalizar, vemos que nuestros recursos fueron eliminados con éxito. Lo podemos
+verificar en la salida del comando y en nuestra cuenta de AWS.
+
+
+Conclusión
+
+Durante el ejercicio, aprendimos que Terraform nos permite agilizar la creación de
+nuestra infraestructura. Nuestro código no es extenso, hicimos uso de módulos para que
+nuestro código sea declarativo y legible para nuestros compañeros de equipo.
+¿Podrías crear una base de datos RDS que esté conectada a las instancias EC2?
+Tenemos a nuestra disposición la registry de Terraform para buscar el módulo más
+adecuado para realizar esa tarea.
+
+En el siguiente enlace podemos encontrar los módulos que utilizamos para este ejercicio
+guiado, así como más módulos para AWS:
+
+
+https://registry.terraform.io/providers/hashicorp/aws/latest
+
+
+
+
+
